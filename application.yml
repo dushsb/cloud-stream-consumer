@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    host: vwsidsg-wrkfl02
+    port: 5672
+    username: itsd
+    password: 8ik,8uhb
+  cloud:
+    stream:
+      bindings:  
+        paymentProducerChannel: 
+          destination: payment-exchange
+          group: payment-group
+server:
+  port: 8082          
